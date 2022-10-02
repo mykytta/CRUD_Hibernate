@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">
+      org.hibernate.dialect.PostgreSQLDialect
+    </property>
+    <property name="hibernate.connection.driver_class">
+      org.postgresql.Driver
+    </property>
+    <property name="hibernate.connection.url">
+      jdbc:postgresql://localhost:5433/Hibernate
+    </property>
+    <property name="hibernate.connection.username">
+      postgres
+    </property>
+    <property name="hibernate.connection.password">
+      1234
+    </property>
+    <mapping class="com.mykyta.crud.model.Developer"/>
+    <mapping class="com.mykyta.crud.model.Skill"/>
+    <mapping class="com.mykyta.crud.model.Specialty"/>
+
+  </session-factory>
+</hibernate-configuration>
